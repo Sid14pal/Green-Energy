@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Green Energy</title>
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Green Energy">
+    <meta name="author">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+
+
+    <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css">
+
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.min.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/sticky-icon/stickyicon.css">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+            <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <div class="page-wrapper">
+<div id="header-placeholder"></div> 
+        <!-- End Header -->
+        <main class="main">
+            <div class="page-header mb-5"
+				style="background-image: url('images/page-header-back.jpg'); background-color: #3C63A4;">
+				<h1 class="page-title">Single Post</h1>
+				<ul class="breadcrumb">
+					<li><a href="./"><i class="d-icon-home"></i></a></li>
+					<li class="delimiter">/</li>
+					<li>Blogs </li>
+                    <li class="delimiter">/</li>
+					<li id="post-name"> </li>
+				</ul>
+			</div>
+            <div class="page-content with-sidebar">
+                <div class="container">
+                    <div class="row gutter-lg">
+                        <div class="col-lg-9">
+                            <article class="post-single">
+  <figure class="post-media">
+    <img id="postImage" width="880" height="450" alt="post" />
+  </figure>
+  <div class="post-details">
+    <div class="post-meta">
+      by <a href="#" id="postAuthor"></a>
+      on <a href="#" id="postDate"></a>
+    </div>
+    <h4 class="post-title postTitle"><a href="#" id="postTitle"></a></h4>
+    <div class="post-body mb-7" id="postParagraph1"></div>
+    <div class="post-body mb-7" id="postParagraph2"></div>
+  </div>
+</article>
+                        </div>
+                        <aside class="col-lg-3 right-sidebar sidebar-fixed sticky-sidebar-wrapper">
+                            <a class="sidebar-close" href="#"><i class="d-icon-times"></i></a>
+                            <a href="#" class="sidebar-toggle"><i class="fas fa-chevron-left"></i></a>
+                            <div class="sidebar-content">
+                                <div class="sticky-sidebar" data-sticky-options="{'top': 89, 'bottom': 70}">
+                                    <div class="widget widget-collapsible border-no">
+                                        <h3 class="widget-title">Blog Categories</h3>
+                                        <ul class="widget-body filter-items search-ul">
+                                            <li><a href="blogs">Accessories</a></li>
+                                            <li><a href="blogs">Fashion</a></li>
+                                            <li><a href="blogs">Lifestyle</a></li>
+                                            <li><a href="blogs">Backpack & Fashion bags</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="widget widget-collapsible">
+                                        <h3 class="widget-title">About us</h3>
+                                        <div class="widget-body">
+                                            <p>We believe that healthy living starts with clean and natural choices. Our mission is to provide you with the finest organic products that are safe, nutritious, and eco-friendly. From farm-fresh produce to daily essentials, everything we offer is rooted in purity and sustainability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        <!-- End Main -->
+       <div id="footer-placeholder"></div> 
+	<!-- Plugins JS File -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/sticky/sticky.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Main JS File -->
+    <script src="js/main.min.js"></script>
+    <script>
+        // Get blog id from URL
+  const params = new URLSearchParams(window.location.search);
+  const postId = parseInt(params.get("id"));
+
+fetch("blogs.json")
+    .then(res => res.json())
+    .then(data => {
+      const post = data.find(p => p.id === postId);
+      if (!post) {
+        document.querySelector(".post-single").innerHTML = "<h2>Post not found</h2>";
+        return;
+      }
+
+      // Fill data
+      document.getElementById("postImage").src = post.image;
+      document.getElementById("postTitle").innerText = post.name;
+        document.getElementById("post-name").innerText = post.name;
+      document.getElementById("postDate").innerText = post.date;
+      document.getElementById("postParagraph1").innerText = post.description.paragraph1;
+   
+
+      // Paragraph2 (object to list)
+      const detailsList = document.getElementById("postParagraph2");
+      Object.entries(post.description.paragraph2).forEach(([key, value]) => {
+        let li = document.createElement("li");
+        li.textContent = `${key}: ${value}`;
+        detailsList.appendChild(li);
+      });
+    })
+    .catch(err => console.error("Error loading blog:", err));
+    </script>
+</body>
+
+</html>

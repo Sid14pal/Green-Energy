@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Green Energy</title>
+      <meta name="keywords" content="HTML5 Template" />
+      <meta name="description" content="Green Energy">
+      <meta name="author">
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="images/icons/favicon.png">
+      <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css">
+      <script src="https://unpkg.com/feather-icons"></script>
+      <!-- Plugins CSS File -->
+      <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/photoswipe/photoswipe.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/photoswipe/default-skin/default-skin.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/sticky-icon/stickyicon.css">
+      <!-- Main CSS File -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body class="riode-rounded-skin">
+      <div id="toast"></div>
+      <div class="page-wrapper">
+ <div id="header-placeholder"></div> 
+         <!-- End Header -->
+         <main class="main pt-6 single-product border-top">
+            <div class="page-content mb-10 pb-6 mt-5">
+               <div class="container">
+                  <div class="product product-single row">
+                     <div class="col-md-5">
+                        <div class="product-gallery product-gallery-sticky mb-lg-9 mb-4 pb-0">
+                           <div id="main-carousel" class="product-single-carousel owl-carousel owl-theme owl-nav-inner row cols-1">
+                              <!-- JS will populate this -->
+                           </div>
+                           <div class="product-thumbs-wrap">
+                              <div id="thumb-gallery" class="product-thumbs">
+                                 <!-- JS will populate this -->
+                              </div>
+                              <button class="thumb-up disabled"><i class="fas fa-chevron-left"></i></button>
+                              <button class="thumb-down disabled"><i class="fas fa-chevron-right"></i></button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-7">
+                        <div class="product-details">
+                           <h1 class="product-name"></h1>
+                           <div class="product-meta">
+                              SKU: <span class="product-sku">12345676-1</span>
+                              Categories: <span class="product-brand category"></span>
+                           </div>
+                           <div class="product-price"><ins class="new-price">$60.00</ins><del
+                              class="old-price">$70.00</del></div>
+                           <div class="ratings-container">
+                              <div class="ratings-full">
+                                 <span class="ratings" style="width:0%"></span>
+                                 <span class="tooltiptext tooltip-top"></span>
+                              </div>
+                              <a href="#product-tab-reviews" class="link-to-tab rating-reviews">( 0 reviews )</a>
+                           </div>
+                           <p class="product-short-desc">Our organic food is carefully grown without synthetic chemicals, harmful pesticides, or genetically modified organisms. Every product is cultivated using natural methods that prioritize your health and well-being.
+
+Choosing organic means enjoying fresher, richer flavors that come straight from nature. Free from artificial additives, our food lets you taste the real goodness of each ingredient. <br>
+
+Organic farming also helps protect the environment. By supporting sustainable practices, we reduce pollution, conserve water, and promote healthy soil for future generations.</p>
+                           <hr class="product-divider">
+                           <div class="product-form product-qty">
+                              <label>QTY:</label>
+                              <div class="product-form-group">
+                                 <div class="input-group">
+                                    <button class="quantity-minus d-icon-minus"></button>
+                                    <input class="quantity form-control" type="number" min="1" max="1000000" id="quantity">
+                                    <button class="quantity-plus d-icon-plus"></button>
+                                 </div>
+                                 <button class="btn-product btn-cartt" id="addToCartBtn"><i class="d-icon-bag"></i>Add To
+                                 Cart</button>
+                              </div>
+                           </div>
+                           <hr class="product-divider mb-3">
+                           <img src="images/gsc_en.png" width="200">
+                           <p>Secure 256-bit SSL encryption</p>
+                              <div class="d-flex">
+                              <span data-feather="check-circle" class="mr-2"></span>
+                              <span>Pickup Available at Shop location</span>
+                           </div>
+                           <div class="d-flex mt-3">
+                              <span class="mr-2">Share On:</span>
+                              <span data-feather="facebook" class="mr-2"></span>
+                              <span data-feather="instagram" class="mr-2"></span>
+                              <span data-feather="twitter"></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab tab-nav-simple product-tabs">
+                     <ul class="nav nav-tabs justify-content-center" role="tablist">
+                        <li class="nav-item">
+                           <a class="nav-link active" href="#product-tab-description">Description</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#product-tab-reviews">Reviews (2)</a>
+                        </li>
+                     </ul>
+                     <div class="tab-content">
+                        <div class="tab-pane active in" id="product-tab-description">
+                           <div class="mt-6" >
+                              <div class="row">
+                                <div class="col-md-6">
+                                 <h5 class="description-title mb-4 font-weight-semi-bold ls-m">Features</h5>
+                                 <p class="mb-2 features"></p>
+                                 <h5 class="description-title mb-3 font-weight-semi-bold ls-m">Specifications
+                                 </h5>
+                                 <div class="specifications"></div>
+                              </div>
+                              <div class="col-md-6 pl-md-6">
+                                 <div class="p-relative d-inline-block mb-3 description-image">
+                                 </div>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tab-pane" id="product-tab-reviews">
+                           <div class="row">
+                              <div class="col-lg-4 mb-6">
+                                 <div class="avg-rating-container">
+                                    <mark>5.0</mark>
+                                    <div class="avg-rating">
+                                       <span class="avg-rating-title">Average Rating</span>
+                                       <div class="ratings-container mb-0">
+                                          <div class="ratings-full">
+                                             <span class="ratings" style="width:100%"></span>
+                                             <span class="tooltiptext tooltip-top"></span>
+                                          </div>
+                                          <span class="rating-reviews">(2 Reviews)</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="ratings-list mb-2">
+                                    <div class="ratings-item">
+                                       <div class="ratings-container mb-0">
+                                          <div class="ratings-full">
+                                             <span class="ratings" style="width:100%"></span>
+                                             <span class="tooltiptext tooltip-top"></span>
+                                          </div>
+                                       </div>
+                                       <div class="rating-percent">
+                                          <span style="width:100%;"></span>
+                                       </div>
+                                       <div class="progress-value">100%</div>
+                                    </div>
+                                    <div class="ratings-item">
+                                       <div class="ratings-container mb-0">
+                                          <div class="ratings-full">
+                                             <span class="ratings" style="width:80%"></span>
+                                             <span class="tooltiptext tooltip-top">4.00</span>
+                                          </div>
+                                       </div>
+                                       <div class="rating-percent">
+                                          <span style="width:0%;"></span>
+                                       </div>
+                                       <div class="progress-value">0%</div>
+                                    </div>
+                                    <div class="ratings-item">
+                                       <div class="ratings-container mb-0">
+                                          <div class="ratings-full">
+                                             <span class="ratings" style="width:60%"></span>
+                                             <span class="tooltiptext tooltip-top">4.00</span>
+                                          </div>
+                                       </div>
+                                       <div class="rating-percent">
+                                          <span style="width:0%;"></span>
+                                       </div>
+                                       <div class="progress-value">0%</div>
+                                    </div>
+                                    <div class="ratings-item">
+                                       <div class="ratings-container mb-0">
+                                          <div class="ratings-full">
+                                             <span class="ratings" style="width:40%"></span>
+                                             <span class="tooltiptext tooltip-top">4.00</span>
+                                          </div>
+                                       </div>
+                                       <div class="rating-percent">
+                                          <span style="width:0%;"></span>
+                                       </div>
+                                       <div class="progress-value">0%</div>
+                                    </div>
+                                    <div class="ratings-item">
+                                       <div class="ratings-container mb-0">
+                                          <div class="ratings-full">
+                                             <span class="ratings" style="width:20%"></span>
+                                             <span class="tooltiptext tooltip-top">4.00</span>
+                                          </div>
+                                       </div>
+                                       <div class="rating-percent">
+                                          <span style="width:0%;"></span>
+                                       </div>
+                                       <div class="progress-value">0%</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-8 comments pt-2 pb-10 border-no">
+                                 <ul class="comments-list">
+                                    <li>
+                                       <div class="comment">
+                                          <figure class="comment-media">
+                                             <a href="#">
+                                             <img src="images/reviews/1.jpg" alt="avatar">
+                                             </a>
+                                          </figure>
+                                          <div class="comment-body">
+                                             <div class="comment-rating ratings-container">
+                                                <div class="ratings-full">
+                                                   <span class="ratings" style="width:100%"></span>
+                                                   <span class="tooltiptext tooltip-top"></span>
+                                                </div>
+                                             </div>
+                                             <div class="comment-user">
+                                                <span class="comment-date">by <span class="font-weight-semi-bold text-uppercase text-dark">James Anderson</span> on
+                                                <span class="font-weight-semi-bold text-dark">Nov 22,
+                                                2018</span></span>
+                                             </div>
+                                             <div class="comment-content mb-5">
+                                                <p>"I’ve been using these turmeric capsules for two months, and my joint pain has reduced significantly. I love that it’s 100% natural with no additives."
+                                                </p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class="comment">
+                                          <figure class="comment-media">
+                                             <a href="#">
+                                             <img src="images/reviews/2.jpg" alt="avatar">
+                                             </a>
+                                          </figure>
+                                          <div class="comment-body">
+                                             <div class="comment-rating ratings-container">
+                                                <div class="ratings-full">
+                                                   <span class="ratings" style="width:100%"></span>
+                                                   <span class="tooltiptext tooltip-top"></span>
+                                                </div>
+                                             </div>
+                                             <div class="comment-user">
+                                                <span class="comment-date">by <span class="font-weight-semi-bold text-uppercase text-dark">Emily Davis</span> on
+                                                <span class="font-weight-semi-bold text-dark">Nov 22,
+                                                2018</span></span>
+                                             </div>
+                                             <div class="comment-content mb-5">
+                                                <p>"The flavor is so refreshing, and I can actually feel more energetic throughout the day. Packaging was eco-friendly too. Highly recommend!"
+                                                </p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <!-- End Reply -->
+                        </div>
+                     </div>
+                  </div>
+                  <section class="pt-3 mt-2 mb-2">
+                     <h2 class="title-echo text-center justify-content-center ls-normal mb-6">Related Products<span
+                        class="pl-6 pr-6">Related Products</span></h2>
+                     <div class="product-wrapper"></div>
+                  </section>
+               </div>
+            </div>
+         </main>
+         <!-- End of Main -->
+         <div id="footer-placeholder"></div> 
+      <!-- Plugins JS File -->
+      <script src="js/product_details.js"></script>
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/sticky/sticky.min.js"></script>
+      <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+      <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+      <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+      <script src="vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+      <script src="vendor/photoswipe/photoswipe.min.js"></script>
+      <script src="vendor/photoswipe/photoswipe-ui-default.min.js"></script>
+      <!-- Main JS File -->
+      <script src="js/main.min.js"></script>
+      <script>
+         feather.replace();
+      </script>
+      <script>
+         let allProducts = [];
+let currentPage = 1;
+let itemsPerPage = 12;
+
+// Fetch all products and display
+fetch('products.json')
+  .then(res => res.json())
+  .then(data => {
+    allProducts = data;
+    renderProducts();
+    renderPagination();
+  })
+  .catch(err => console.error('Fetch error:', err));
+
+function renderProducts() {
+  const container = document.querySelector('.product-wrapper'); 
+  container.innerHTML = '<div class="row"></div>';
+  const row = container.querySelector('.row');
+
+  // Pagination logic
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const productsToShow = allProducts.slice(start, end);
+
+  productsToShow.forEach(product => {
+    const img1 = product.images?.[0] || "images/default.jpg";
+    const img2 = product.images?.[1] || "images/default.jpg";
+
+    row.innerHTML += `
+    <div class="col-md-2 mb-4">
+        <figure class="product-media">
+          <a href="product-details.html?id=${product.id}">
+            <img src="${img1}" alt="${product.name}" width="280" height="315" />
+            <img src="${img2}" alt="${product.name}" width="280" height="315" />
+          </a>
+          <div class="product-label-group">
+            ${product.off && product.off > 0 
+              ? `<label class="product-label label-sale">${product.off}% Off</label>` 
+              : ``}
+          </div>
+          <div class="product-action-vertical">
+            <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist">
+              <i class="d-icon-heart"></i>
+            </a>
+          </div>
+        </figure>
+        <div class="product-details">
+          <h3 class="product-name">
+            <a href="product-details.html?id=${product.id}">${product.title}</a>
+          </h3>
+          <div class="product-price ls-md">
+            <span class="price">$${product.price.toFixed(2)}</span>
+          </div>
+          <div class="ratings-container">
+            <div class="ratings-full">
+              <span class="ratings" style="width:${product.rating ? product.rating * 20 : 80}%"></span>
+            </div>
+            <a href="#" class="rating-reviews">( ${product.reviews || 4.5} reviews )</a>
+          </div>
+          <div class="product-action">
+            <a href="product-details.html?id=${product.id}" class="btn-product btn-cart ls-l add-to-cart" title="View Details">
+              <span>View Details</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+}
+      </script>
+   </body>
+</html>

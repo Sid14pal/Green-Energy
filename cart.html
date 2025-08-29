@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Green Energy</title>
+      <meta name="keywords" content="HTML5 Template" />
+      <meta name="description" content="Green Energy">
+      <meta name="author">
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="images/icons/favicon.png">
+      <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css">
+      <script src="https://unpkg.com/feather-icons"></script>
+      <!-- Plugins CSS File -->
+      <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/photoswipe/photoswipe.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/photoswipe/default-skin/default-skin.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/sticky-icon/stickyicon.css">
+      <!-- Main CSS File -->
+      <link rel="stylesheet" type="text/css" href="css/style.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body>
+      <div class="page-wrapper">
+      <div id="header-placeholder"></div> 
+         <!-- End Header -->
+         <main class="main cart">
+            <div class="page-content pt-7 pb-10">
+               <div class="step-by pr-4 pl-4">
+                  <h3 class="title title-simple title-step active"><a>1. Shopping Cart</a></h3>
+                  <span data-feather="chevron-right"></span>
+                  <h3 class="title title-simple title-step"><a href="checkout.html">2. Checkout</a></h3>
+                  <span data-feather="chevron-right"></span>
+                  <h3 class="title title-simple title-step"><a href="order.html">3. Order Complete</a></h3>
+               </div>
+               <div class="container mt-7 mb-2">
+                  <div class="row">
+                     <div class="col-lg-8 col-md-12 pr-lg-4">
+                        <table class="shop-table cart-table">
+                           <thead>
+                              <tr>
+                                 <th><span>Product</span></th>
+                                 <th></th>
+                                 <th><span>Price</span></th>
+                                 <th><span>quantity</span></th>
+                                 <th>Subtotal</th>
+                              </tr>
+                           </thead>
+                           <tbody id="cart-body"></tbody>
+                        </table>
+                        <div class="cart-actions mb-6 pt-4">
+                           <a href="shop.html" class="btn btn-dark btn-md btn-rounded btn-icon-left mr-4 mb-4"><i
+                              class="d-icon-arrow-left"></i>Continue Shopping</a>
+                           <button type="submit"
+                              class="btn btn-outline btn-dark btn-md btn-rounded remove-all">Remove All</button>
+                        </div>
+                        <div class="cart-coupon-box mb-8">
+                           <h4 class="title coupon-title text-uppercase ls-m">Coupon Discount</h4>
+                           <input type="text" name="coupon_code"
+                              class="input-text form-control text-grey ls-m mb-4"
+                              id="coupon_code" placeholder="Enter coupon code here...">
+                           <button type="button" id="applyCouponBtn" 
+                              class="btn btn-md btn-dark btn-rounded btn-outline">
+                           Apply Coupon
+                           </button>
+                        </div>
+                     </div>
+                     <aside class="col-lg-4 sticky-sidebar-wrapper">
+                        <div class="sticky-sidebar" data-sticky-options="{'bottom': 20}">
+                           <div class="summary mb-4">
+                              <h3 class="summary-title text-left">Cart Totals</h3>
+                              <table class="shipping">
+                                 <tr class="summary-subtotal">
+                                    <td>
+                                       <h4 class="summary-subtitle">Subtotal</h4>
+                                    </td>
+                                    <td>
+                                       <p class="summary-subtotal-price cart-total"></p>
+                                    </td>
+                                 </tr>
+                                 <tr class="sumnary-shipping shipping-row-last">
+                                    <td colspan="2">
+                                       <h4 class="summary-subtitle">Calculate Shipping</h4>
+                                       <ul>
+                                          <li>
+                                             <div class="custom-radio">
+                                                <input type="radio" id="free-shipping" name="shipping"
+                                                   class="custom-control-input" checked>
+                                                <label class="custom-control-label" for="free-shipping">Free
+                                                shipping</label>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </td>
+                                 </tr>
+                              </table>
+                              <table class="total">
+                                 <tr class="summary-subtotal">
+                                    <td>
+                                       <h4 class="summary-subtitle">Total</h4>
+                                    </td>
+                                    <td>
+                                       <p class="summary-total-price ls-s">$426.99</p>
+                                    </td>
+                                 </tr>
+                              </table>
+                              <a href="checkout.html" class="btn btn-dark btn-rounded btn-checkout">Proceed to
+                              checkout</a>
+                           </div>
+                        </div>
+                     </aside>
+                  </div>
+               </div>
+            </div>
+         </main>
+         <!-- End Main -->
+              <div id="footer-placeholder"></div> 
+      <!-- Plugins JS File -->
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+      <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+      <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+      <script src="js/cart.js"></script>
+    <script src="js/main.min.js"></script>
+   </body>
+</html>

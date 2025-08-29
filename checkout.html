@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Green Energy</title>
+      <meta name="keywords" content="HTML5 Template" />
+      <meta name="description" content="Green Energy">
+      <meta name="author">
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" href="images/icons/favicon.png">
+      <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css">
+      <!-- Plugins CSS File -->
+      <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
+      <link rel="stylesheet" type="text/css" href="vendor/sticky-icon/stickyicon.css">
+      <!-- Main CSS File -->
+      <link rel="stylesheet" type="text/css" href="css/style.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <script src="https://unpkg.com/feather-icons"></script>
+   </head>
+   <body>
+      <div class="page-wrapper">
+         <div id="header-placeholder"></div> 
+         <!-- End Header -->
+         <main class="main checkout">
+            <div class="page-content pt-7 pb-10 mb-10">
+               <div class="step-by pr-4 pl-4">
+                  <h3 class="title title-simple title-step"><a href="cart.html">1. Shopping Cart</a></h3>
+                  <span data-feather="chevron-right"></span>
+                  <h3 class="title title-simple title-step active"><a>2. Checkout</a></h3>
+                  <span data-feather="chevron-right"></span>
+                  <h3 class="title title-simple title-step"><a href="order.html">3. Order Complete</a></h3>
+               </div>
+               <div class="container mt-7">
+                  <form action="#" class="form">
+                     <div class="row">
+                        <div class="col-lg-7 mb-6 mb-lg-0 pr-lg-4">
+                           <h3 class="title title-simple text-left text-uppercase">Billing Details</h3>
+                           <div class="row">
+                              <div class="col-xs-6">
+                                 <label>First Name *</label>
+                                 <input type="text" class="form-control" name="first-name" required="" />
+                              </div>
+                              <div class="col-xs-6">
+                                 <label>Last Name *</label>
+                                 <input type="text" class="form-control" name="last-name" required="" />
+                              </div>
+                           </div>
+                           <label>Company Name (Optional)</label>
+                           <input type="text" class="form-control" name="company-name" required="" />
+                           <label>Country / Region *</label>
+                           <div class="select-box">
+                              <select name="country" class="form-control">
+                                 <option value="us" selected>United States (US)</option>
+                                 <option value="uk"> United Kingdom</option>
+                                 <option value="fr">France</option>
+                                 <option value="aus">Austria</option>
+                              </select>
+                           </div>
+                           <label>Street Address *</label>
+                           <input type="text" class="form-control" name="address1" required=""
+                              placeholder="House number and street name" />
+                           <input type="text" class="form-control" name="address2" required=""
+                              placeholder="Apartment, suite, unit, etc. (optional)" />
+                           <div class="row">
+                              <div class="col-xs-6">
+                                 <label>Town / City *</label>
+                                 <input type="text" class="form-control" name="city" required="" />
+                              </div>
+                              <div class="col-xs-6">
+                                 <label>State *</label>
+                                 <input type="text" class="form-control" name="state" required="" />
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-xs-6">
+                                 <label>ZIP *</label>
+                                 <input type="text" class="form-control" name="zip" required="" />
+                                 <span class="form-errors"></span>
+                              </div>
+                              <div class="col-xs-6">
+                                 <label>Phone *</label>
+                                 <input type="text" class="form-control" name="phone" required="" />
+                              </div>
+                           </div>
+                           <label>Email Address *</label>
+                           <input type="text" class="form-control" name="email-address" required="" />
+                           <h2 class="title title-simple text-uppercase text-left">Additional Information</h2>
+                           <label>Order Notes (Optional)</label>
+                           <textarea class="form-control pb-2 pt-2 mb-0" cols="30" rows="5"
+                              placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                        </div>
+                        <aside class="col-lg-5 sticky-sidebar-wrapper">
+                           <div class="sticky-sidebar mt-1" data-sticky-options="{'bottom': 50}">
+                              <div class="summary pt-5">
+                                 <h3 class="title title-simple text-left text-uppercase">Your Order</h3>
+                                 <table class="order-table">
+                                    <thead>
+                                       <tr>
+                                          <th>Product</th>
+                                          <th></th>
+                                       </tr>
+                                    </thead>
+                                    <tbody id="cart-body">
+                                       <tr class="sumnary-shipping shipping-row-last">
+                                          <td colspan="2">
+                                             <h4 class="summary-subtitle">Calculate Shipping</h4>
+                                             <ul>
+                                                <li>
+                                                   <div class="custom-radio">
+                                                      <input type="radio" id="flat_rate" name="shipping"
+                                                         class="custom-control-input" checked>
+                                                      <label class="custom-control-label"
+                                                         for="flat_rate">Flat rate</label>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <div class="custom-radio">
+                                                      <input type="radio" id="free-shipping"
+                                                         name="shipping" class="custom-control-input">
+                                                      <label class="custom-control-label"
+                                                         for="free-shipping">Free
+                                                      shipping</label>
+                                                   </div>
+                                                </li>
+                                                <li>
+                                                   <div class="custom-radio">
+                                                      <input type="radio" id="local_pickup"
+                                                         name="shipping" class="custom-control-input">
+                                                      <label class="custom-control-label"
+                                                         for="local_pickup">Local pickup</label>
+                                                   </div>
+                                                </li>
+                                             </ul>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table class="cart-summary-table">
+                                    <tbody>
+                                       <tr style="border-bottom:1px solid #e0e0e0;">
+                                          <td style="padding:10px; font-weight:600; color:#444;">Subtotal:</td>
+                                          <td style="padding:10px; text-align:right; font-weight:500;">
+                                             <span id="checkout-subtotal" class="price">$0.00</span>
+                                          </td>
+                                       </tr>
+                                       <tr style="border-bottom:1px solid #e0e0e0; background:#fff8f8;">
+                                          <td style="padding:10px; font-weight:600; color:#d32f2f;">Discount:</td>
+                                          <td style="padding:10px; text-align:right; font-weight:600; color:#d32f2f;">
+                                             <span id="checkout-discount" class="price">-$0.00</span>
+                                          </td>
+                                       </tr>
+                                       <tr style="background:#f5f5f5;">
+                                          <td style="padding:12px; font-size:16px; font-weight:700; color:#000;">Total:</td>
+                                          <td style="padding:12px; text-align:right; font-size:16px; font-weight:700; color:#000;">
+                                             <span id="checkout-total" class="price">$0.00</span>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <div class="payment accordion radio-type">
+                                    <h4 class="summary-subtitle ls-m pb-3">Payment Methods</h4>
+                                    <div class="card">
+                                       <div class="card-header">
+                                          <a href="#collapse1"
+                                             class="collapse text-body text-normal ls-m">Check payments
+                                          </a>
+                                       </div>
+                                       <div id="collapse1" class="expanded" style="display: block;">
+                                          <div class="card-body ls-m">
+                                             Please send a check to Store Name, Store Street,
+                                             Store Town, Store State / County, Store Postcode.
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="card">
+                                       <div class="card-header">
+                                          <a href="#collapse2" class="expand text-body text-normal ls-m">Cash
+                                          on delivery</a>
+                                       </div>
+                                       <div id="collapse2" class="collapsed">
+                                          <div class="card-body ls-m">
+                                             Pay with cash upon delivery.
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-checkbox mt-4 mb-5">
+                                    <input type="checkbox" class="custom-checkbox" id="terms-condition"
+                                       name="terms-condition" />
+                                    <label class="form-control-label" for="terms-condition">
+                                    I have read and agree to the website <a href="#">terms and conditions
+                                    </a>*
+                                    </label>
+                                 </div>
+                                 <button type="submit" class="btn btn-dark btn-rounded btn-order">Place
+                                 Order</button>
+                              </div>
+                           </div>
+                        </aside>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </main>
+         <!-- End Main -->
+     <div id="footer-placeholder"></div> 
+         <!-- End Footer -->
+      </div>
+
+      <!-- Plugins JS File -->
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/sticky/sticky.min.js"></script>
+      <script src="vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+      <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+      <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+      <!-- Main JS File -->
+      <script src="js/main.min.js"></script>
+      <script src="js/checkout.js"></script>
+      <script>
+         feather.replace();
+      </script>
+   </body>
+</html>
