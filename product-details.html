@@ -12,6 +12,7 @@
       <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free/css/all.min.css">
       <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css">
       <script src="https://unpkg.com/feather-icons"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
       <!-- Plugins CSS File -->
       <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
       <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.min.css">
@@ -274,88 +275,12 @@ Organic farming also helps protect the environment. By supporting sustainable pr
       <!-- Plugins JS File -->
       <script src="js/product_details.js"></script>
       <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/sticky/sticky.min.js"></script>
-      <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-      <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
       <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
-      <script src="vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
-      <script src="vendor/photoswipe/photoswipe.min.js"></script>
-      <script src="vendor/photoswipe/photoswipe-ui-default.min.js"></script>
       <!-- Main JS File -->
       <script src="js/main.min.js"></script>
       <script>
          feather.replace();
       </script>
-      <script>
-         let allProducts = [];
-let currentPage = 1;
-let itemsPerPage = 12;
 
-// Fetch all products and display
-fetch('products.json')
-  .then(res => res.json())
-  .then(data => {
-    allProducts = data;
-    renderProducts();
-    renderPagination();
-  })
-  .catch(err => console.error('Fetch error:', err));
-
-function renderProducts() {
-  const container = document.querySelector('.product-wrapper'); 
-  container.innerHTML = '<div class="row"></div>';
-  const row = container.querySelector('.row');
-
-  // Pagination logic
-  const start = (currentPage - 1) * itemsPerPage;
-  const end = start + itemsPerPage;
-  const productsToShow = allProducts.slice(start, end);
-
-  productsToShow.forEach(product => {
-    const img1 = product.images?.[0] || "images/default.jpg";
-    const img2 = product.images?.[1] || "images/default.jpg";
-
-    row.innerHTML += `
-    <div class="col-md-2 mb-4">
-        <figure class="product-media">
-          <a href="product-details.html?id=${product.id}">
-            <img src="${img1}" alt="${product.name}" width="280" height="315" />
-            <img src="${img2}" alt="${product.name}" width="280" height="315" />
-          </a>
-          <div class="product-label-group">
-            ${product.off && product.off > 0 
-              ? `<label class="product-label label-sale">${product.off}% Off</label>` 
-              : ``}
-          </div>
-          <div class="product-action-vertical">
-            <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist">
-              <i class="d-icon-heart"></i>
-            </a>
-          </div>
-        </figure>
-        <div class="product-details">
-          <h3 class="product-name">
-            <a href="product-details.html?id=${product.id}">${product.title}</a>
-          </h3>
-          <div class="product-price ls-md">
-            <span class="price">$${product.price.toFixed(2)}</span>
-          </div>
-          <div class="ratings-container">
-            <div class="ratings-full">
-              <span class="ratings" style="width:${product.rating ? product.rating * 20 : 80}%"></span>
-            </div>
-            <a href="#" class="rating-reviews">( ${product.reviews || 4.5} reviews )</a>
-          </div>
-          <div class="product-action">
-            <a href="product-details.html?id=${product.id}" class="btn-product btn-cart ls-l add-to-cart" title="View Details">
-              <span>View Details</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    `;
-  });
-}
-      </script>
    </body>
 </html>

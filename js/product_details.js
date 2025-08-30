@@ -161,18 +161,3 @@ const form = document.getElementById('reviewForm');
     // Reset form
     form.reset();
   });
-
-  function loadReviews() {
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    reviews.forEach(addReviewToList);
-  }
-
-  function addReviewToList(review) {
-    const div = document.createElement('div');
-    div.classList.add('review');
-    div.innerHTML = `
-      <strong>${review.name}</strong> - ${'★'.repeat(review.rating)}<br>
-      <em>${review.comment}</em>
-    `;
-    reviewsList.appendChild(div);
-  }
