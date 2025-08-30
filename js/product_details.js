@@ -32,6 +32,21 @@ fetch('products.json')
     const product = data.find(p => p.id === productId);
 
     if (product) {
+        // Populate Main Carousel
+      const mainCarousel = document.getElementById('main-carousel');
+      mainCarousel.innerHTML = product.images.map(img =>
+        `<figure class="product-image">
+            <img src="${img}" alt="${product.title}" width="800" height="900">
+         </figure>`
+      ).join('');
+
+      // Populate Thumbnails
+      const thumbGallery = document.getElementById('thumb-gallery');
+      thumbGallery.innerHTML = product.images.map((img, index) =>
+        `<div class="product-thumb ${index === 0 ? 'active' : ''}">
+            <img src="${img}" alt="product thumbnail" width="150" height="169">
+         </div>`
+      ).join('');
       document.querySelectorAll('.product-name').forEach(el => {
         el.textContent = product.title;
       });
@@ -65,22 +80,6 @@ fetch('products.json')
         specItem.innerHTML = `<strong>${key}:</strong> ${value}`;
         specsContainer.appendChild(specItem);
       });
-
-      // Populate Main Carousel
-      const mainCarousel = document.getElementById('main-carousel');
-      mainCarousel.innerHTML = product.images.map(img =>
-        `<figure class="product-image">
-            <img src="${img}" alt="${product.title}" width="800" height="900">
-         </figure>`
-      ).join('');
-
-      // Populate Thumbnails
-      const thumbGallery = document.getElementById('thumb-gallery');
-      thumbGallery.innerHTML = product.images.map((img, index) =>
-        `<div class="product-thumb ${index === 0 ? 'active' : ''}">
-            <img src="${img}" alt="product thumbnail" width="150" height="169">
-         </div>`
-      ).join('');
 
       // Show correct description section
       document.querySelectorAll("[id^='descriptions']").forEach(div => {
@@ -161,3 +160,6 @@ const form = document.getElementById('reviewForm');
     // Reset form
     form.reset();
   });
+
+
+  
