@@ -39,14 +39,16 @@ fetch('products.json')
             <img src="${img}" alt="${product.title}" width="800" height="900">
          </figure>`
       ).join('');
-
-      // Populate Thumbnails
-      const thumbGallery = document.getElementById('thumb-gallery');
-      thumbGallery.innerHTML = product.images.map((img, index) =>
-        `<div class="product-thumb ${index === 0 ? 'active' : ''}">
-            <img src="${img}" alt="product thumbnail" width="150" height="169">
-         </div>`
-      ).join('');
+      $('#main-carousel').owlCarousel('destroy');
+$('#main-carousel').owlCarousel({
+  items: 1,
+  loop: true,
+  nav: true,
+  dots: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true
+});
       document.querySelectorAll('.product-name').forEach(el => {
         el.textContent = product.title;
       });
